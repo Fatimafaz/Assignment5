@@ -24,14 +24,14 @@ for index in range(countofproc)
 
     dict['turnaround_time']=0
 timecheck=0
-for index in range(countofproc)
-    for index2 in range(countofproc-index)
+for index in range(countofproc-1)
+    for index2 in range(countofproc-index-1)
 
-    if proclist[index2]['Burst_time']>proclist[index2+1] and proclist[ndex2]['arrival_time]>timecheck
+    if proclist[index2]['Burst_time']>proclist[index2+1] and proclist[index2]['arrival_time]>timecheck
 
-    tempdict=proclist[index]
-    proclist[index]=proclist[index+1]
-    proclist[index+1]=tempdict
+    tempdict=proclist[index2]
+    proclist[index2]=proclist[index2+1]
+    proclist[index2+1]=tempdict
 timecheck=timecheck+proclist[index2]['Burst_time']    
                                                                              
 
