@@ -2,6 +2,7 @@
 countofproc=input('How many processes you want to make ? ' )
 finishtime=0
 startime=0
+averavgturntim=0
 
 proclist=[0]*countofproc
 
@@ -36,6 +37,7 @@ for index in range(countofproc)
     finishtime=finishtime+proclist[index]['Burst_time']
     proclist[index]['waitingtime']=startime-proclist[index]['arrival_time']
     proclist[index]['turnaround_time']=finishtime-proclist[index]['arrivaltime']
+    avgturntime=avgturntim+ proclist[index]['turnaround_time']
     print 'waitingtime : ' , proclist[index]['waitingtime']
-    print 'turnaround time : ' , proclist[index]['waitingtime'] 
-    
+    print 'turnaround time : ' , proclist[index]['waitingtime']
+    print 'average turnaround time : ' , avgturntim
