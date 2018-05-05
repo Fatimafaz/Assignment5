@@ -1,4 +1,5 @@
 
+
 countofproc=input('How many processes you want to make ? ' )
 finishtime=0
 startime=0
@@ -22,13 +23,17 @@ for index in range(countofproc)
     dict['waitingtime']=0
 
     dict['turnaround_time']=0
+timecheck=0
+for index in range(countofproc)
+    for index2 in range(countofproc-index)
 
-for index in range(countofproc-1)
-    if proclist[index]['Burst_time']>proclist[index+1]
+    if proclist[index2]['Burst_time']>proclist[index2+1] and proclist[ndex2]['arrival_time]>timecheck
 
     tempdict=proclist[index]
     proclist[index]=proclist[index+1]
     proclist[index+1]=tempdict
+timecheck=timecheck+proclist[index2]['Burst_time']    
+                                                                             
 
 
 
